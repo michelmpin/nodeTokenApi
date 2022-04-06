@@ -1,0 +1,31 @@
+_id: req_632d5891e72248d9b61d24a6a60b2844
+type: Request
+parentId: wrk_ec113035569246498967080d0b412441
+modified: 1649207125781
+created: 1649202449201
+url: "{{ _.baseUrl }}/users"
+name: create user
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"name": "Caio",
+    	"username": "p4d1m",
+    	"password": "adfafdf"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_3be3299b42c94e1dad403ef1956d827a
+authentication: {}
+metaSortKey: -1649202449201
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
