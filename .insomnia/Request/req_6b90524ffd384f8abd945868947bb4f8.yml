@@ -1,19 +1,18 @@
-_id: req_632d5891e72248d9b61d24a6a60b2844
+_id: req_6b90524ffd384f8abd945868947bb4f8
 type: Request
 parentId: wrk_ec113035569246498967080d0b412441
-modified: 1649281709552
-created: 1649202449201
-url: "{{ _.baseUrl }}/users"
-name: create user
+modified: 1649277474261
+created: 1649265063791
+url: "{{ _.baseUrl }}/login"
+name: user login
 description: ""
 method: POST
 body:
   mimeType: application/json
   text: |-
     {
-    	"name": "Caio",
-    	"username": "p4d1m",
-    	"password": "adfafdf"
+    	"username": "mick",
+    	"password": "1234"
     }
 parameters: []
 headers:
@@ -21,7 +20,7 @@ headers:
     value: application/json
     id: pair_3be3299b42c94e1dad403ef1956d827a
 authentication: {}
-metaSortKey: -1649202449201
+metaSortKey: -1649202360460
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true
