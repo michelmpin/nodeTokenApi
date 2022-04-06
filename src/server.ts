@@ -1,11 +1,19 @@
 import "express-async-errors"
-import express, { NextFunction } from 'express'
+import express from 'express'
 import { router } from './routes';
+
+//Swagger
+//razão do "resolveJsonModule": true no tsconfig
+import swaggerDocs from "./swagger.json";
+import swaggerUi from "swagger-ui-express";
 
 const app = express();
 
 //informa sobre o uso de json nas requisições
 app.use(express.json());
+
+/* Serving the swagger-ui-express package. */
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs))
 
 //inclui o arquivo de rotas
 app.use(router);

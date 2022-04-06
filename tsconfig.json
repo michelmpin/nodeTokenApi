@@ -5,8 +5,10 @@
     "target": "es5",
     "strict": false,
     "moduleResolution": "node",
+    "resolveJsonModule": true,
     "sourceMap": true,
-    "outDir": "dist"
+    "outDir": "dist",
+    "forceConsistentCasingInFileNames": true
   },
   "lib": ["es2015"]
 }

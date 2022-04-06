@@ -1,5 +1,7 @@
 import {compare} from 'bcryptjs'
 import { client } from "../../prisma/client";
+import { GenerateRefreshToken } from '../../provider/GenerateRefreshToken';
+import { GenerateTokenProvider } from '../../provider/GenerateTokenProvider';
 
 interface IRequest{
   username: string;
@@ -24,21 +26,30 @@ class AuthenticateUserUseCase {
     });
 
     if (!userAlreadyExists) {
-      let error = erroUsuarioSenha();
-      throw error
+      throw erroUsuarioSenha();
     }
 
     //Verificar se a senha está correta
     const passMatch = compare(password,userAlreadyExists.password);
 
     if(!passMatch){
-      let error = erroUsuarioSenha();
-      throw error
+      throw erroUsuarioSenha();
     }
 
     //gerar token do usuario
+    const generateTokenProvider = new GenerateTokenProvider();
+    const token = await generateTokenProvider.execute(userAlreadyExists.id)
+
+    await client.refreshToken.deleteMany({
+      where:{
+        userId: userAlreadyExists.id
+      }
+    })
     
+    const generatedRefreshToken = new GenerateRefreshToken();
+    const refreshToken = await generatedRefreshToken.execute(userAlreadyExists.id)
     
+    return {token, refreshToken}
   }
   
 }
