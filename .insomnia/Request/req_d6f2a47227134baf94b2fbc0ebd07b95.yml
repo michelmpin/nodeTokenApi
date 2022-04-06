@@ -1,19 +1,17 @@
-_id: req_632d5891e72248d9b61d24a6a60b2844
+_id: req_d6f2a47227134baf94b2fbc0ebd07b95
 type: Request
 parentId: wrk_ec113035569246498967080d0b412441
-modified: 1649281709552
-created: 1649202449201
-url: "{{ _.baseUrl }}/users"
-name: create user
+modified: 1649281707453
+created: 1649268595881
+url: "{{ _.baseUrl }}/refresh-token"
+name: refresh token
 description: ""
 method: POST
 body:
   mimeType: application/json
   text: |-
     {
-    	"name": "Caio",
-    	"username": "p4d1m",
-    	"password": "adfafdf"
+    	"refresh_token": "1f2d195c-4198-4d88-b217-a324211aa0a3"
     }
 parameters: []
 headers:
@@ -21,7 +19,7 @@ headers:
     value: application/json
     id: pair_3be3299b42c94e1dad403ef1956d827a
 authentication: {}
-metaSortKey: -1649202449201
+metaSortKey: -1649202316089.5
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

@@ -1,0 +1,24 @@
+_id: req_f877e1e3c6b24944a0aacf8134fd662b
+type: Request
+parentId: wrk_ec113035569246498967080d0b412441
+modified: 1649269945553
+created: 1649265331231
+url: "{{ _.baseUrl }}/token"
+name: token
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NDkyNjk5MjgsImV4cCI6MTY0OTI2OTk0OCwic3ViIjoiMWRmNzk0NDQtNGYzNi00N2YzLWI3MjUtYzVjNzc4ZDFjNDY2In0.D6xZM04zcEumxgowBrwNaCaxX1PfDzCsUKgqWhgsl3M
+  disabled: false
+metaSortKey: -1649195541231
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
