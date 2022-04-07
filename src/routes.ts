@@ -37,7 +37,7 @@ router.get("/token", ensureAuthenticated, (req,res) => {
 router.get("/", (req,res) => {
         res
           .status(200)
-          .send({response:"Its alive"})
+          .send({message:"Its alive"})
       })
 
 export {router}
