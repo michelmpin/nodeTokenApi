@@ -14,7 +14,7 @@ class RefreshTokenUserUseCase {
 
     if(!refreshToken){
       let error = new Error("Refresh token invalid")
-      error.stack = "401"
+      error.name = "401"
       throw error
     }
 

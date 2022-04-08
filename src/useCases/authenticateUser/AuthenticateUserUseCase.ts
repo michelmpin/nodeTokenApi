@@ -14,7 +14,7 @@ class AuthenticateUserUseCase {
     
     function erroUsuarioSenha() {
       let error = new Error("User or Password incorrect");
-      error.stack = '401';
+      error.name = '401';
       return error;
     }
 

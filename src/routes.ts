@@ -40,4 +40,10 @@ router.get("/", (req,res) => {
           .send({message:"Its alive"})
       })
 
+// retorna um erro caso haja requisição inexistente
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({ message: 'Houve um problema ao executar a operação. Tente mais tarde'});
+});
+
 export {router}

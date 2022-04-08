@@ -19,7 +19,7 @@ class CreateUserUseCase {
 
    if(userAlreadyExists){
      let error = new Error("User already Exists!");
-     error.stack = '409';
+     error.name = '409';
      throw error;
    }
 
